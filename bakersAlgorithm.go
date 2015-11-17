@@ -40,6 +40,7 @@ func main() {
 
 	for i:= 0; i < 5; i++ {
 		c := Customer{fib: rand.Intn(40) + 10, fibResult: 0}
+		c.fibResult = fibonacci(c.fib)
 		go func() {line <- c}()
 	}
 
